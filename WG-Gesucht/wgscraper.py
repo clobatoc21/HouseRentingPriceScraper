@@ -60,10 +60,9 @@ for url_i in urllist:
 
 # create dataframe
 df = pd.DataFrame(data={"Ciudad": citylist, "Descripcion": namelist, "Precio": pricelist, "Superficie": sizelist})
-# Get names of indexes for which column Superficie has value 0
-indexNames = df[ df['Superficie'] == 0 ].index
-# Delete these row indexes from dataFrame
-df.drop(indexNames , inplace=True)
+# clean null values
+boolean_series = df.Ciudad.isin(namecitylist)
+df = df[boolean_series]
 # export to csv
 df.to_csv("./wg-gesucht.csv", sep=',',index=False)
 print("finalizado")
