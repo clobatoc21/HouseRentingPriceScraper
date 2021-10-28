@@ -5,7 +5,9 @@ from random import randint
 import pandas as pd
 
 # Initialize variables
-urllist =['https://www.wg-gesucht.de/wohnungen-in-Berlin.8.2.1.', 'https://www.wg-gesucht.de/wohnungen-in-Hamburg.55.2.1.', 'https://www.wg-gesucht.de/wohnungen-in-Munchen.90.2.1.', 'https://www.wg-gesucht.de/wohnungen-in-Koeln.73.2.1.', 'https://www.wg-gesucht.de/wohnungen-in-Frankfurt-am-Main.41.2.1.']
+urllist =['https://www.wg-gesucht.de/wohnungen-in-Berlin.8.2.1.', 'https://www.wg-gesucht.de/wohnungen-in-Hamburg.55.2.1.', 
+          'https://www.wg-gesucht.de/wohnungen-in-Munchen.90.2.1.', 'https://www.wg-gesucht.de/wohnungen-in-Koeln.73.2.1.', 
+          'https://www.wg-gesucht.de/wohnungen-in-Frankfurt-am-Main.41.2.1.']
 namecitylist = ['Berlin', 'Hamburgo', 'Munich', 'Colonia', 'Frankfurt']
 citylist = []
 namelist = []
