@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[80]:
+# In[9]:
 
 
 # Import libraries
@@ -11,6 +11,7 @@ import time
 from bs4 import BeautifulSoup
 import re
 import pandas as pd
+from random import randint
 
 # Modify headers
 
@@ -28,28 +29,25 @@ headers = {
 
 # Create empty lists
 
+IDlist = []
 namelist = []
 pricelist = []
 sizelist = []
-floorlist = []
+citylist = []
 
 # Script
 
-for i in range(10):
+for city in ["madrid", "barcelona", "valencia", "sevilla", "zaragoza"]:
     
     # Scrape the web and obtain IDs
     
-    url = "https://www.idealista.com/alquiler-viviendas/madrid-madrid/"
-    #url = "https://www.idealista.com/alquiler-viviendas/madrid-madrid/pagina-" + str(i) + ".htm"
+    url = "https://www.idealista.com/alquiler-viviendas/" + city + "-" + city + "/"
         
     for term in ["web scraping", "web crawling", "scrape this site"]:
-            t0 = time.time() # Obtenemos momento de inicio
             
             data = requests.get(url, headers=headers)
-            
-            response_delay = time.time() - t0 # Estimamos el tiempo de respuesta (s)
 
-            time.sleep(10 * response_delay) # Espera basada en el tiempo de respuesta (10x)
+            time.sleep(randint(5,20))
 
     soup = BeautifulSoup(data.text, 'html.parser')
 
@@ -58,61 +56,28 @@ for i in range(10):
     ids = re.findall('"adId":"([0-9]{,8})",', 
                       id.find('script').contents[0], re.DOTALL) # Obtención de los IDs de los anuncios
     
-
-    # Scrape individual advertisements
-    
     for id in ids:
-        time.sleep(10 * response_delay) # Espera basada en el tiempo de respuesta (10x)
+        IDlist.append(id)
+        citylist.append(city.title())
+        title = soup.find('a', attrs={'aria-level':'2', "class":"item-link", "href":"/inmueble/" + id + "/"})["title"]
+        namelist.append(title)
     
-        url_id = 'https://www.idealista.com/inmueble/' + id + '/'
+    price = soup.find_all('span', attrs={'class':'item-price h2-simulated'})
     
-        entry = requests.get(url_id, headers=headers)
-
-        soup_id = BeautifulSoup(entry.text, 'html.parser')
-
-        name = soup_id.find('head').find('title').contents
-        namelist.append(name)
-    
-        # prop_type = soup.find('strong', attrs={'class':'typology'}).contents
-    
-        price = soup_id.find('strong', attrs={'class':'price'})
-        if price != None:
-            price = price.contents
+    for els in price:
+        pricelist.append(els.contents[0])
         
-        pricelist.append(price)
-    
-        size_floor = []
-        size_floor_obj = soup_id.find('p', attrs={'class':'info-data txt-big'}).find('span').next_siblings
+    details = soup.find_all('div', attrs={'class':'price-row'})
 
-        for el in size_floor_obj:
-            if el.find('span') != -1:
-                element = el.find('span').contents
-                size_floor.append(element)
-    
-        size = size_floor[0]
-        # floor = size_floor[1]
-    
+    for els in details:
+        size = list(els.next_siblings)[3].contents[0]
         sizelist.append(size)
-        # floorlist.append(floor)
-
 
 # Fill dataframe and export to csv
 
-df = pd.DataFrame(data={"Descripcion": namelist, "Precio": pricelist, "Superficie": sizelist})
+df = pd.DataFrame(data={"ID": IDlist, "Ciudad": citylist, "Descripcion": namelist, "Precio": pricelist, "Superficie": sizelist})
 
-df.to_csv("./idealista.csv", sep=',',index=False)
+df.to_csv("./idealista.csv", sep=',', encoding="utf-8", index=False)
 
 print("El scraping de Idealista ha finalizado")
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
 
