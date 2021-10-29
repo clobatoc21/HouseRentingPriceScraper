@@ -27,10 +27,3 @@ os.remove("wg-gesucht.csv")
 os.remove("idealista.csv")
 
 print("El proceso de scraping ha finalizado")
-
-
-# In[ ]:
-
-
-
-
