@@ -14,11 +14,18 @@ header-includes:
 
 ## 1. Contexto.
 
-Contexto
+En una época en la que la movilidad internacional está cada vez más presente en la carrera profesional de los trabajadores, resulta relevante conocer el valor de la vivienda en los países con potenciales ofertas de trabajo; esto nos permitirá analizar objetivamente el coste de vida en lugares determinados y evaluar los beneficios que cada posición nos puede proporcionar.
+
+Gracias a digitalización de las agencias y a la aparición de páginas de consolidación de información, la información sobre el precio del alquiler en los destinos deseados está al alcance de todos. Para el presente proyecto se ha examinado la oferta de alquiler de viviendas en España y Alemania, puesto que cada uno de los integrantes del grupo residimos actualmente en uno de estos dos países; se han utilizado las webs de *Idealista* y *WG-Gesucht*, respectivamente.
+
+Utilizaremos las cinco ciudades más grandes de cada país: Madrid, Barcelona, Valencia, Sevilla y Zaragoza para España; Berlín, Colonia, Frankfurt, Hamburgo y Munich para Alemania. 
+
+La actualización periódica del fichero generado permitiría comparar el precio mensual de vivienda en cada uno de estos países y analizar la posible evolución de precios a lo largo del tiempo.
+
 
 ## 2. Título.
 
-Título
+Título. 
 
 ## 3. Descripción del dataset.
 
