@@ -1,0 +1,60 @@
+---
+title: 'Tipología y ciclo de vida de los datos'
+subtitle: 'PRÁCTICA 1: Web scrapping'
+author: "Autores: Carmen Lobato Cassinello y Raúl Vicente Ferrer"
+date: "Noviembre 2021"
+output:
+  pdf_document:
+    highlight: zenburn
+    toc: yes
+header-includes:
+  - \usepackage {hyperref}
+  - \hypersetup {colorlinks = true, linkcolor = blue, urlcolor = blue}
+---
+
+## 1. Contexto.
+
+Contexto
+
+## 2. Título.
+
+Título
+
+## 3. Descripción del dataset.
+
+Descripción del dataset
+
+## 4. Representación gráfica.
+
+Representación gráfica
+
+## 5. Contenido.
+
+Contenido
+
+## 6. Agradecimientos.
+
+Agradecimientos
+
+## 7. Inspiración. 
+
+Inspiración
+
+## 8. Licencia.
+
+Licencia
+
+## 9. Código.
+
+Código
+
+## 10. Dataset.
+
+Dataset
+
+## Recursos y bibliografía
+
+*
+*
+*
+
