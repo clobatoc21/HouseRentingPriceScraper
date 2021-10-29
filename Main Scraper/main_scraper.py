@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[8]:
+# In[3]:
 
 
 import wgScraper
@@ -21,9 +21,16 @@ id = pd.read_csv("idealista.csv")
 combined_csv.append(id)
 
 scraping_result = pd.concat(combined_csv, axis=0, ignore_index=True)
-df.to_csv("./scraping_result.csv", sep=',', encoding="utf-8", index=False)
+scraping_result.to_csv("./scraping_result.csv", sep=',', encoding="utf-8", index=False)
 
 os.remove("wg-gesucht.csv")
 os.remove("idealista.csv")
 
 print("El proceso de scraping ha finalizado")
+
+
+# In[ ]:
+
+
+
+
