@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[9]:
-
 
 # Import libraries
 
@@ -75,7 +73,7 @@ for city in ["madrid", "barcelona", "valencia", "sevilla", "zaragoza"]:
 
 # Fill dataframe and export to csv
 
-df = pd.DataFrame(data={"ID": IDlist, "Ciudad": citylist, "Descripcion": namelist, "Precio": pricelist, "Superficie": sizelist})
+df = pd.DataFrame(data={"Ciudad": citylist, "Descripcion": namelist, "Precio": pricelist, "Superficie": sizelist})
 
 df.to_csv("./idealista.csv", sep=',', encoding="utf-8", index=False)
 

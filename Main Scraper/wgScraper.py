@@ -67,4 +67,4 @@ boolean_series = df.Ciudad.isin(namecitylist)
 df = df[boolean_series]
 # export to csv
 df.to_csv("./wg-gesucht.csv", sep=',',index=False)
-print("finalizado")
+print("El scraping de WG-gesucht ha finalizado")

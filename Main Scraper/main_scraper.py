@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[3]:
-
 
 import wgScraper
 import IdealistaScraper
@@ -27,10 +25,3 @@ os.remove("wg-gesucht.csv")
 os.remove("idealista.csv")
 
 print("El proceso de scraping ha finalizado")
-
-
-# In[ ]:
-
-
-
-
