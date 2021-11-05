@@ -18,7 +18,7 @@ En una época en la que la movilidad internacional está cada vez más presente 
 
 Ante esta situación, resulta relevante conocer el valor de la vivienda en ambos países: de los gastos a los que hay que hacer frente a diario, el mayor será el alquiler del lugar de residencia. Este dato nos puede dar una idea de lo caro que será vivir en una determinada ciudad.
 
-Gracias a digitalización de las agencias y a la aparición de páginas de consolidación de información, la información sobre el precio del alquiler está al alcance de todos. Los portales más populares para la búsqueda de alquiler de una vivienda en España y Alemania, los cuales serán utilizados para nuestro trabajo de *Web Scraping* son *[Idealista]*(https://www.idealista.com/) y *[WG-Gesucht]*(https://www.wg-gesucht.de/es/), respectivamente.
+Gracias a digitalización de las agencias y a la aparición de páginas de consolidación de información, la información sobre el precio del alquiler está al alcance de todos. Los portales más populares para la búsqueda de alquiler de una vivienda en España y Alemania, los cuales serán utilizados para nuestro trabajo de *Web Scraping* son *Idealista* (https://www.idealista.com/) y *WG-Gesucht* (https://www.wg-gesucht.de/es/), respectivamente.
 
 Utilizaremos las principales ciudades de cada país para recopilar información sobre el precio de alquiler por metro cuadrado. La actualización periódica del fichero generado permitiría comparar el precio mensual de vivienda en cada uno de estos países, facilitando la comparación del coste de vida, y analizar la posible evolución del mismo a lo largo del tiempo.
 
@@ -36,7 +36,7 @@ El conjunto de datos generado recoge información el precio de alquiler por metr
 
 Cada uno de estos registros se corresponde a una única vivienda.
 
-Los datos del dataset son de tipo caracter o numérico, quedando excluidos otros tipos de variables. Adicionalmente, si la página de origen no contiene información para algún campo, esta variable aparecerá vacía en el conjunto de datos; se ha decidido mantener estas entradas, dejando a decisión del usuario lo que hacer con ellas. No es necesaria ninguna acción de limpieza adicional.
+Los datos del dataset son de tipo carácter o numérico, quedando excluidos otros tipos de variables. Adicionalmente, si la página de origen no contiene información para algún campo, esta variable aparecerá vacía en el conjunto de datos; se ha decidido mantener estas entradas, dejando a decisión del usuario lo que hacer con ellas. No es necesaria ninguna acción de limpieza adicional.
 
 
 ## 4. Representación gráfica.
@@ -80,7 +80,7 @@ Con una visión más amplia, se podría emplear este dataset para analizar la ev
 
 ## 8. Licencia.
 
-Se ha decidido hacer uso de la licencia **Released Under CC BY-NC-SA 4.0 Licens**, la cual ofrece libertades a los usuarios a la par que derechos a los propietarios. Se permite su distribución, se reconoce al autor de la obra y se permite editar el código fuente. No obstante, no se permite lucrarse económicamente con el mismo ni privatizar el software con una licencia que altere las libertades anteriormente expuestas. Los propietarios de los datos serán siempre Idealista y WG-Gesucht, y así deberá hacerse saber en cualquier utilización de los mismos.
+Se ha decidido hacer uso de la licencia **Released Under CC BY-NC-SA 4.0 License**, la cual ofrece libertades a los usuarios a la par que derechos a los propietarios. Se permite su distribución, se reconoce al autor de la obra y se permite editar el código fuente. No obstante, no se permite lucrarse económicamente con el mismo ni privatizar el software con una licencia que altere las libertades anteriormente expuestas. Los propietarios de los datos serán siempre Idealista y WG-Gesucht, y así deberá hacerse saber en cualquier utilización de los mismos.
 
 ## 9. Código.
 
