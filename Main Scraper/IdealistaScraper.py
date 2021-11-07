@@ -55,21 +55,21 @@ for city in ["madrid", "barcelona", "valencia", "sevilla", "zaragoza"]:
                       id.find('script').contents[0], re.DOTALL) # Obtención de los IDs de los anuncios
     
     for id in ids:
-        IDlist.append(id)
-        citylist.append(city.title())
+        IDlist.append(id) # Generate IDs list
+        citylist.append(city.title()) # Generate Cities list
         title = soup.find('a', attrs={'aria-level':'2', "class":"item-link", "href":"/inmueble/" + id + "/"})["title"]
-        namelist.append(title)
+        namelist.append(title) # Generate titles list
     
     price = soup.find_all('span', attrs={'class':'item-price h2-simulated'})
     
     for els in price:
-        pricelist.append(els.contents[0])
+        pricelist.append(els.contents[0]) # Generate prices list
         
     details = soup.find_all('div', attrs={'class':'price-row'})
 
     for els in details:
         size = list(els.next_siblings)[3].contents[0]
-        sizelist.append(size)
+        sizelist.append(size) # Generate sizes list
 
 # Fill dataframe and export to csv
 
