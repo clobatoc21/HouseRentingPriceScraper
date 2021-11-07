@@ -63,12 +63,14 @@ for city in ["madrid", "barcelona", "valencia", "sevilla", "zaragoza"]:
     price = soup.find_all('span', attrs={'class':'item-price h2-simulated'})
     
     for els in price:
-        pricelist.append(els.contents[0]) # Generate prices list
+        pricelist.append(els.contents[0].replace('.', '')) # Generate prices list
         
     details = soup.find_all('div', attrs={'class':'price-row'})
 
     for els in details:
         size = list(els.next_siblings)[3].contents[0]
+        if 'Planta' in size:
+            size = list(els.next_siblings)[1].contents[0]
         sizelist.append(size) # Generate sizes list
 
 # Fill dataframe and export to csv
