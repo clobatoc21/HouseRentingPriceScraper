@@ -88,7 +88,7 @@ El código utilizado para la extracción de la información requerida mediante *
 
 ## 10. Dataset.
 
-El dataset se ha publicado en formato CSV en Zenodo [DOI. 10.5281/zenodo.5643913](https://doi.org/10.5281/zenodo.5643913) con la siguiente descripción:
+El dataset se ha publicado en formato CSV en Zenodo [DOI. 10.5281/zenodo.5651521](https://doi.org/10.5281/zenodo.5651521) con la siguiente descripción:
 
 *The dataset contains information extracted from the websites “Idealista” and "WG-Gesucht" about different prices of square meter rent in the main cities of Spain and Germany.The dataset contains data as of November 2021.* 
 
