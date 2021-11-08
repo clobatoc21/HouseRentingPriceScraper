@@ -1,12 +1,18 @@
 # HouseRentingPriceScraper
 This scraper was built as part of the subject "Tipología y ciclo de vida de los datos", which belongs to Data Science Master's program in Universitat Oberta de Catalunya. It uses python web scraping libraries to extract prices from IDEALISTA and WG-GESUCHT, two apartment hunting websites from Spain and Germany respectively.
 
+# Group members
+- Raúl Vicente Ferrer
+- Carmen Lobato Cassinello
+
 # Files
-- main_scraer.py: main program, it initializes the scraping process.
+- main_scraper.py: main program, it initializes the scraping process.
 - IdealistaScraper.py: scrapes Idealista, an appartment hunting website for rentals in Spain.
 - wgScraper.py: scrapes WG-gesucht, an appartment hunting website for rentals in Germany.
 
-To run the script, please execute python main_scraper.py
+To run the script, please execute python **main_scraper.py**
+
+The resulting dataset has been uploaded to Zenodo and can be accessed through this link: https://doi.org/10.5281/zenodo.5651521
 
 # Libraries
 In order to execute these files, the following libraries need to be installed:
